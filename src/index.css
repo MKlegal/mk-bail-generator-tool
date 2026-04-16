@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-georgia: "Georgia", serif;
+  --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-times: "Times New Roman", serif;
+  --font-urdu: "Noto Nastaliq Urdu", serif;
+  
+  --color-bg: #0A0F1C;
+  --color-accent: #D4AF37;
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-border-gold: rgba(212, 175, 55, 0.2);
+  --color-text-main: #E0E0E0;
+  --color-paper: #FFFFFF;
+  --color-paper-text: #000000;
+  --color-preview-bg: #111827;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    font-family: var(--font-helvetica);
+  }
+}
+
+.luxury-gradient {
+  background: linear-gradient(90deg, #0A0F1C 0%, #161D30 100%);
+}
+
+.widget-box {
+  background: var(--color-glass);
+  border: 1px solid var(--color-border-gold);
+  border-radius: 6px;
+}
+
+.input-thematic {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-border-gold);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.input-thematic:focus {
+  border-color: var(--color-accent);
+  background: rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+
+.preview-paper {
+  background: var(--color-paper);
+  color: var(--color-paper-text);
+  font-family: var(--font-times);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.urdu-text {
+  font-family: var(--font-urdu);
+  line-height: 2.2;
+}
